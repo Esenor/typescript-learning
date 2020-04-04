@@ -1,0 +1,31 @@
+{
+  "name": "typescript_dev",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./lib/index.js",
+  "scripts": {
+    "lint": "eslint --ext .ts ./src/** --ext .js ./src/**",
+    "clear:cache": "rm -r ./lib/*",
+    "prebuild": "npm run lint && npm run clear:cache",
+    "build": "tsc",
+    "prestart": "npm run build",
+    "start": "node -r esm ./lib/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.26.0",
+    "@typescript-eslint/parser": "^2.26.0",
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1"
+  },
+  "dependencies": {
+    "esm": "^3.2.25",
+    "typescript": "^3.8.3"
+  }
+}
