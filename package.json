@@ -26,6 +26,6 @@
   },
   "dependencies": {
     "esm": "^3.2.25",
-    "typescript": "^3.8.3"
+    "typescript": "^4.0.0"
   }
 }
